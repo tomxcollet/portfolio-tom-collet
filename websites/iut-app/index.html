@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<title>IUT App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="img/ico.ico">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan";}
+body, html {
+  height: 100%;
+  color: black;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */1
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+    .text {
+        padding-bottom: 32px;
+    }
+    
+hr {
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1.5px solid black;
+  width: 75%;
+}
+
+    
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('img/carre_vert.png');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("img/carre_vert.png");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("img/carre_vert.png");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button w3-hover-white"> HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> EMPLOI DU TEMPS</a>
+    <a href="#ressources" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> RESSOURCES</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">
+        <i class="fa fa-home"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">EMPLOI DU TEMPS</a>
+    <a href="#ressources" class="w3-bar-item w3-button" onclick="toggleFunction()">RESSOURCES</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+ <span class="w3-xlarge w3-text-white w3-wide">BIENVENUE</span>
+  </div>
+</div>
+
+<!-- Container (Emploi du temps Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">EMPLOI DU TEMPS</h3>
+    
+   <div class="w3-center w3-padding-16">
+       <a href="schedule/20.01.jpg" download="Emploi du temps 1A COM" class="w3-button w3-large" style="background-color: #e2cdca; color: white"><i class="fa fa-download w3-margin-right"></i>OUVRIR</a>
+    </div>
+        
+  <p class="text">L'emploi du temps est mis à jour toutes les semaines. Il est cependant possible que celui-ci contienne des erreurs, qui sont corrigées sur le tableau à l'accueil de l'IUT. Il est donc conseillé de vérifier de temps en temps le tableau et de ne pas se fier uniquement à l'emploi du temps de ce site.</p>
+ 
+    </div>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xlarge w3-text-white w3-wide">RESSOURCES</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64"  id="ressources">
+  <h3 class="w3-center">LIENS</h3>
+  <p class="w3-center"><em>Quelques liens mis à jour pour permettre un accès plus rapide à certains des documents les plus utiles</em></p><br>
+    
+    <div class="w3-center w3-padding-16">
+       <a href="https://moodle.com" target="_blank" class="w3-button w3-large" style="background-color: #e2cdca; color: white">MOODLE</a>
+    </div>
+    
+       <div class="w3-center w3-padding-16">
+       <a href="liens/excel_UE.jpg" download="Calcul de réussite des UE - 1er semestre" class="w3-button w3-large" style="background-color: #e2cdca; color: white">CALCUL DES NOTES</a>
+    </div>
+    
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">L'IUT de Lyon 3</h3>
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="img/plan.png" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right w3-margin-bottom"></i> 88, rue Pasteur - Lyon 7<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right w3-margin-bottom"></i><a href="mailto: yourusername@example.com"> Prénom Nom</a><br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right w3-margin-bottom"></i><a href="tel:+330 00 00 00 00"> Téléphone</a><br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right w3-margin-bottom"></i><a href="mailto: yoursecondusername@example.com"> Second Prénom Nom</a><br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right w3-margin-bottom"></i><a href="tel:+330 00 00 00 00"> Second téléphone </a><br>
+      </div>
+    </div>
+  </div>
+    <hr/>
+    <h3 class="w3-center w3-padding-64">Le Webmaster</h3>
+    <div class="w3-large w3-margin-bottom w3-center">
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right w3-margin-bottom"></i><a href="mailto: tom.collet@univ-lyon3.fr"> Tom COLLET - professionnel</a><br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right w3-margin-bottom"></i> <a href="mailto: tomxcollet@gmail.com"> Tom COLLET - personnel</a><br>
+    </div>
+    </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-64 " style="background-color: #a7bcb5">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Vers le haut</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/velo.collet.3/"><i class="fa fa-facebook-official w3-hover-opacity" style="color:white"></i></a>
+    <a href="https://www.instagram.com/tomxcollet/"><i class="fa fa-instagram w3-hover-opacity" style="color:white"></i></a>
+    <a href="https://www.snapchat.com/add/tomco1810?share_id=MTIDOTI1&locale=en_FR"><i class="fa fa-snapchat w3-hover-opacity" style="color:white"></i></a>
+    <a href="https://www.linkedin.com/in/tom-collet-6378a8209"><i class="fa fa-linkedin w3-hover-opacity" style="color:white"></i></a>
+  </div>
+  <p style="color:white">Made by <a href="https://neon.page/tomxcollet" title="W3.CSS" target="_blank" class="w3-hover-text-green" style="color:white">Tom COLLET</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
