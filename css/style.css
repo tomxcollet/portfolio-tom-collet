@@ -869,6 +869,51 @@ position:absolute;
     width: 100%;
 }
 
+#btn-black {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#btn-elea {
+    background-color: #6a4047;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#btn-depliant {
+    background-color: #cf4e2f;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#btn-maxtess {
+    background-color: #008c7f;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 100%;
+}
+
+
 .disable-text-selection {
  -webkit-user-select: none;
  -moz-user-select: none;
